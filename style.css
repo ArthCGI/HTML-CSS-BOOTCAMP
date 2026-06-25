@@ -1,4 +1,4 @@
-/* ===== Reset & Base ===== */
+===== Reset & Base ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -882,15 +882,17 @@ a { text-decoration: none; color: inherit; }
 }
 
 .contact-info-icon {
-  font-size: 1.5rem;
+  font-size: 0.55rem;
   flex-shrink: 0;
-  width: 42px;
-  height: 42px;
-  background: linear-gradient(135deg, rgba(240,165,0,0.12), rgba(0,78,124,0.12));
-  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+  background: #f0a500;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: transparent;
+  margin-top: 6px;
 }
 
 .contact-info-label {
