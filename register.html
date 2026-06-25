@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register &mdash; CG Company</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-page">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">CG</div>
+      <span class="logo-text">CG Company</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="btn-login">Login</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </header>
+
+  <!-- Register Card -->
+  <main class="auth-main">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div class="logo-badge">CG</div>
+      </div>
+      <h1 class="auth-title">Create account</h1>
+      <p class="auth-subtitle">Join CG Company &mdash; it&rsquo;s free</p>
+
+      <form id="registerForm" class="auth-form" novalidate>
+
+        <div class="form-group">
+          <label for="fullName">Full name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="John Doe"
+            autocomplete="name"
+            required
+          />
+          <span class="field-error" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="regEmail">Email address</label>
+          <input
+            type="email"
+            id="regEmail"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+          <span class="field-error" id="regEmailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact number</label>
+          <input
+            type="tel"
+            id="contact"
+            name="contact"
+            placeholder="+1 555 000 0000"
+            autocomplete="tel"
+            required
+          />
+          <span class="field-error" id="contactError"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="regPassword">Password</label>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="regPassword"
+                name="password"
+                placeholder="Min. 8 characters"
+                autocomplete="new-password"
+                required
+              />
+              <button type="button" class="toggle-pw" aria-label="Show password" data-target="regPassword">&#128065;</button>
+            </div>
+            <span class="field-error" id="regPwError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirm password</label>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Repeat password"
+                autocomplete="new-password"
+                required
+              />
+              <button type="button" class="toggle-pw" aria-label="Show password" data-target="confirmPassword">&#128065;</button>
+            </div>
+            <span class="field-error" id="confirmPwError"></span>
+          </div>
+        </div>
+
+        <!-- Live password strength indicator -->
+        <div class="pw-strength" id="pwStrength" aria-live="polite">
+          <div class="pw-strength-bar"><span id="pwStrengthFill"></span></div>
+          <span id="pwStrengthLabel"></span>
+        </div>
+
+        <span class="form-error" id="regFormError"></span>
+
+        <button type="submit" class="btn-primary btn-full">Create Account</button>
+      </form>
+
+      <p class="auth-switch">
+        Already have an account?
+        <a href="login.html">Login</a>
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-icon">CG</div>
+        <span>CG Company</span>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CG Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scrpt.js"></script>
+</body>
+</html>
