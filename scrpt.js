@@ -78,34 +78,6 @@ if (logoutBtn) {
 // Register form
 const registerForm = document.getElementById('registerForm');
 if (registerForm) {
-  // Password strength meter
-  const regPw = document.getElementById('regPassword');
-  const fill  = document.getElementById('pwStrengthFill');
-  const label = document.getElementById('pwStrengthLabel');
-
-  if (regPw && fill && label) {
-    regPw.addEventListener('input', () => {
-      const v = regPw.value;
-      let score = 0;
-      if (v.length >= 8)            score++;
-      if (/[A-Z]/.test(v))          score++;
-      if (/[0-9]/.test(v))          score++;
-      if (/[^A-Za-z0-9]/.test(v))   score++;
-      const levels = [
-        { w: '0%',   bg: 'transparent', text: '' },
-        { w: '25%',  bg: '#e94560',     text: 'Weak' },
-        { w: '50%',  bg: '#f4a261',     text: 'Fair' },
-        { w: '75%',  bg: '#06a77d',     text: 'Good' },
-        { w: '100%', bg: '#065f46',     text: 'Strong' },
-      ];
-      const lvl = v.length === 0 ? levels[0] : levels[score] || levels[4];
-      fill.style.width      = lvl.w;
-      fill.style.background = lvl.bg;
-      label.textContent     = lvl.text;
-      label.style.color     = lvl.bg;
-    });
-  }
-
   registerForm.addEventListener('submit', e => {
     e.preventDefault();
     const name    = document.getElementById('fullName');

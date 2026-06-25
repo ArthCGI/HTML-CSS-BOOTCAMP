@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Register &mdash; CG Company</title>
+  <title>Register | CG Company</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="auth-page">
@@ -11,8 +11,7 @@
   <!-- Navbar -->
   <header class="navbar">
     <a href="index.html" class="nav-logo">
-      <div class="logo-icon">CG</div>
-      <span class="logo-text">CG Company</span>
+      <img src="logo.png" class="nav-logo-img" alt="CG infinity" />
     </a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
@@ -27,10 +26,9 @@
   <main class="auth-main">
     <div class="auth-card">
       <div class="auth-logo">
-        <div class="logo-badge">CG</div>
+        <img src="logo.png" class="auth-logo-img" alt="CG infinity" />
       </div>
       <h1 class="auth-title">Create account</h1>
-      <p class="auth-subtitle">Join CG Company &mdash; it&rsquo;s free</p>
 
       <form id="registerForm" class="auth-form" novalidate>
 
@@ -40,7 +38,6 @@
             type="text"
             id="fullName"
             name="fullName"
-            placeholder="John Doe"
             autocomplete="name"
             required
           />
@@ -53,7 +50,6 @@
             type="email"
             id="regEmail"
             name="email"
-            placeholder="you@example.com"
             autocomplete="email"
             required
           />
@@ -66,7 +62,6 @@
             type="tel"
             id="contact"
             name="contact"
-            placeholder="+1 555 000 0000"
             autocomplete="tel"
             required
           />
@@ -81,7 +76,6 @@
                 type="password"
                 id="regPassword"
                 name="password"
-                placeholder="Min. 8 characters"
                 autocomplete="new-password"
                 required
               />
@@ -97,7 +91,6 @@
                 type="password"
                 id="confirmPassword"
                 name="confirmPassword"
-                placeholder="Repeat password"
                 autocomplete="new-password"
                 required
               />
@@ -105,12 +98,6 @@
             </div>
             <span class="field-error" id="confirmPwError"></span>
           </div>
-        </div>
-
-        <!-- Live password strength indicator -->
-        <div class="pw-strength" id="pwStrength" aria-live="polite">
-          <div class="pw-strength-bar"><span id="pwStrengthFill"></span></div>
-          <span id="pwStrengthLabel"></span>
         </div>
 
         <span class="form-error" id="regFormError"></span>
@@ -129,8 +116,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="logo-icon">CG</div>
-        <span>CG Company</span>
+        <img src="logo.png" class="footer-logo-img" alt="CG infinity" />
       </div>
       <nav class="footer-links">
         <a href="index.html">Home</a>
